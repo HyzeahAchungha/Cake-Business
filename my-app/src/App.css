@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("/fonts/GeistMono-Regular.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("/fonts/GeistMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("/fonts/GeistMono-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geist Mono fallbacks";
+  src: local("Courier New"), local("monospace");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@theme {
+  --color-border: 214.3 31.8% 91.4%;
+  --color-input: 214.3 31.8% 91.4%;
+  --color-ring: 215 20.2% 65.1%;
+  --color-background: 0 0% 100%;
+  --color-foreground: 222.2 47.4% 11.2%;
+  
+  --color-primary: 222.2 47.4% 11.2%;
+  --color-primary-foreground: 210 40% 98%;
+  
+  --color-secondary: 210 40% 96.1%;
+  --color-secondary-foreground: 222.2 47.4% 11.2%;
+  
+  --color-destructive: 0 100% 50%;
+  --color-destructive-foreground: 210 40% 98%;
+  
+  --color-muted: 210 40% 96.1%;
+  --color-muted-foreground: 215.4 16.3% 46.9%;
+  
+  --color-accent: 210 40% 96.1%;
+  --color-accent-foreground: 222.2 47.4% 11.2%;
+  
+  --color-popover: 0 0% 100%;
+  --color-popover-foreground: 222.2 47.4% 11.2%;
+  
+  --color-card: 0 0% 100%;
+  --color-card-foreground: 222.2 47.4% 11.2%;
+
+  --radius: 0.5rem;
+
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-geist: "Geist", var(--font-sans);
+  --font-geist-mono: "Geist Mono", ui-monospace, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  @theme {
+    --color-background: 224 71% 4%;
+    --color-foreground: 213 31% 91%;
+    
+    --color-muted: 223 47% 11%;
+    --color-muted-foreground: 215.4 16.3% 56.9%;
+    
+    --color-accent: 216 34% 17%;
+    --color-accent-foreground: 210 40% 98%;
+    
+    --color-popover: 224 71% 4%;
+    --color-popover-foreground: 215 20.2% 65.1%;
+    
+    --color-border: 216 34% 17%;
+    --color-input: 216 34% 17%;
+    
+    --color-card: 224 71% 4%;
+    --color-card-foreground: 213 31% 91%;
+    
+    --color-primary: 210 40% 98%;
+    --color-primary-foreground: 222.2 47.4% 1.2%;
+    
+    --color-secondary: 222.2 47.4% 11.2%;
+    --color-secondary-foreground: 210 40% 98%;
+    
+    --color-destructive: 0 63% 31%;
+    --color-destructive-foreground: 210 40% 98%;
+    
+    --color-ring: 216 34% 17%;
+  }
+}
+
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+
+* {
+  border-color: hsl(var(--color-border));
+}
+
+body {
+  background-color: hsl(var(--color-background));
+  color: hsl(var(--color-foreground));
+  font-family: var(--font-sans);
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
