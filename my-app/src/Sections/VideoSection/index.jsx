@@ -1,7 +1,7 @@
 export const VideoSection = () => {
   return (
     <div className=" box-border caret-transparent overflow-visible  md:h-[300px] 
-      absolute left-0 w-full z-10 h-[220px] pointer-events-none -bottom-[110px] md:-bottom-[70px]">
+      absolute left-0 w-full z-10 h-[220px] pointer-events-none -bottom-[110px] md:-bottom-[70px] ">
       <video
         autoPlay
         loop

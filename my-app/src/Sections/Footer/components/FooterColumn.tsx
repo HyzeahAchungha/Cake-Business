@@ -119,7 +119,7 @@ export const FooterColumn = (props: FooterColumnProps) => {
       )}
 
       {props.variant === "newsletter" && (
-        <div className="text-[oklab(0.999994_0.0000455677_0.0000200868_/_0.6)] bg-[oklab(0.999994_0.0000455678_0.0000200868_/_0.05)] box-border caret-transparent p-2 rounded-[3.35544e+07px]">
+        <div className="text-[oklab(0.999994_0.0000455677_0.0000200868/0.6)]` bg-[oklab(0.999994_0.0000455678_0.0000200868/0.05)] box-border caret-transparent p-2 rounded-[3.35544e+07px]">
           <p>{props.newsletterDescription}</p>
         </div>
       )}

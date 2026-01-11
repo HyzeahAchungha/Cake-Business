@@ -8,7 +8,7 @@ export const CategorySection = () => {
           Explore by Category
         </h2>
       </div>
-      <div className="relative z-30 mb-2 md:mb-2">
+      <div className="relative z-30 mb-2 md:mb-4">
         <CategoryCarousel />
       </div>
       
