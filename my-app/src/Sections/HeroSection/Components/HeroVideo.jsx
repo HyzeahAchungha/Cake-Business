@@ -14,8 +14,8 @@ export const HeroVideo = () => {
           className="text-black box-border caret-transparent leading-[normal] pointer-events-auto font-times_new_roman"
         />
       </video>
-      <div className="absolute bg-[oklab(0_0_0_/_0.4)] box-border caret-transparent mix-blend-multiply inset-0"></div>
-      <div className="absolute bg-[linear-gradient(to_top,oklab(0.388996_0.100903_-0.144178_/_0.6)_0%,rgba(0,0,0,0)_50%,oklab(0_0_0_/_0.3)_100%)] box-border caret-transparent inset-0"></div>
+      <div className="absolute bg-[oklab(0_0_0/0.4)] box-border caret-transparent mix-blend-multiply inset-0"></div>
+      <div className="absolute bg-[linear-gradient(to_top,oklab(0.388996_0.100903_-0.144178/0.6)_0%,rgba(0,0,0,0)_50%,oklab(0_0_0/0.3)_100%)] box-border caret-transparent inset-0"></div>
     </div>
   );
 };

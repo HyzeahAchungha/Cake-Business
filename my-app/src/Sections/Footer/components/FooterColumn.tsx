@@ -25,7 +25,7 @@ export const FooterColumn = (props: FooterColumnProps) => {
       </h3>
 
       {props.variant === "explore" && props.links && (
-        <ul className="text-[oklab(0.901998_0.0376404_-0.0504854_/_0.8)] box-border caret-transparent list-none pl-0">
+        <ul className="text-[oklab(0.901998_0.0376404_-0.0504854/0.8)] box-border caret-transparent list-none pl-0">
           {props.links.map((link, index) => (
             <li
               key={index}
@@ -41,7 +41,7 @@ export const FooterColumn = (props: FooterColumnProps) => {
 
       {props.variant === "contact" && props.contactInfo && (
         <>
-          <ul className="text-[oklab(0.901998_0.0376404_-0.0504854_/_0.8)] box-border caret-transparent list-none mb-6 pl-0">
+          <ul className="text-[oklab(0.901998_0.0376404_-0.0504854/0.8)] box-border caret-transparent list-none mb-6 pl-0">
             <li className="items-start box-border caret-transparent gap-x-3 flex gap-y-3 mb-4">
               <img
                 src="https://c.animaapp.com/mk2d2gqt1asXsp/assets/icon-6.svg"
@@ -93,7 +93,7 @@ export const FooterColumn = (props: FooterColumnProps) => {
             {props.socialLinks?.tiktok && (
               <a
                 href={props.socialLinks.tiktok}
-                className="text-[lab(64.5597_64.3615_-12.7988)] bg-[oklab(0.999994_0.0000455678_0.0000200868_/_0.1)] box-border caret-transparent block p-2 rounded-[3.35544e+07px]"
+                className="text-[lab(64.5597_64.3615_-12.7988)] bg-[oklab(0.999994_0.0000455678_0.0000200868/0.1)] box-border caret-transparent block p-2 rounded-[3.35544e+07px]"
               >
                 <img
                   src="https://c.animaapp.com/mk2d2gqt1asXsp/assets/icon-9.svg"
@@ -105,7 +105,7 @@ export const FooterColumn = (props: FooterColumnProps) => {
             {props.socialLinks?.whatsapp && (
               <a
                 href={props.socialLinks.whatsapp}
-                className="text-[lab(64.5597_64.3615_-12.7988)] bg-[oklab(0.999994_0.0000455678_0.0000200868_/_0.1)] box-border caret-transparent block p-2 rounded-[3.35544e+07px]"
+                className="text-[lab(64.5597_64.3615_-12.7988)] bg-[oklab(0.999994_0.0000455678_0.0000200868/0.1)] box-border caret-transparent block p-2 rounded-[3.35544e+07px]"
               >
                 <img
                   src="https://c.animaapp.com/mk2d2gqt1asXsp/assets/icon-10.svg"

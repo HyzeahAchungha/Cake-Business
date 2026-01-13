@@ -27,7 +27,7 @@ export default function OurStorypage() {
                 <img 
                   src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600&h=800&fit=crop" 
                   alt="Berlinda Austin - Founder"
-                  className="w-full h-[600px] object-cover"
+                  className="w-full h-150 object-cover"
                 />
               </div>
               {/* Name Badge */}

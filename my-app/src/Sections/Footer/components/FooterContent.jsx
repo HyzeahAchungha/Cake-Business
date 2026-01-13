@@ -3,7 +3,7 @@ import { FooterColumn } from "@/Sections/Footer/components/FooterColumn";
 
 export const FooterContent = () => {
   return (
-    <div className="relative box-border caret-transparent gap-x-12 grid grid-cols-[repeat(1,minmax(0px,1fr))] max-w-none gap-y-12 w-full z-10 mb-24 mx-auto px-4 md:grid-cols-4 md:max-w-screen-xl">
+    <div className="relative box-border caret-transparent gap-x-12 grid grid-cols-1 max-w-none gap-y-12 w-full z-10 mb-24 mx-auto px-4 md:grid-cols-4 md:max-w-7xl">
       <FooterBrand />
       <FooterColumn
         title="Explore"
