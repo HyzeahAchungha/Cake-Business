@@ -138,23 +138,6 @@ export default function ShopPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pt-15">
-      {/* <header className="bg-white shadow-sm sticky top-0 z-40">
-        <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-          <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-700 to-pink-500 bg-clip-text text-transparent">The 3Bs Bakery</h1>
-          <nav className="flex gap-8">
-            <a href="#" className="text-gray-600 hover:text-purple-700 font-medium">Shop</a>
-            <a href="#" className="text-gray-600 hover:text-purple-700 font-medium">Our Story</a>
-            <a href="#" className="text-gray-600 hover:text-purple-700 font-medium">Gallery</a>
-          </nav>
-          <div className="flex items-center gap-5">
-            <button className="text-gray-600 hover:text-purple-700"><Search className="w-6 h-6" /></button>
-            <button onClick={() => setIsCartOpen(true)} className="relative text-gray-600 hover:text-purple-700">
-              <ShoppingCart className="w-6 h-6" />
-              {cartItems.length > 0 && <span className="absolute -top-2 -right-2 bg-purple-700 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">{cartItems.length}</span>}
-            </button>
-          </div>
-        </div>
-      </header> */}
 
       <div className="max-w-7xl mx-auto px-6 py-10">
         <div className="mb-8">
@@ -163,7 +146,7 @@ export default function ShopPage() {
         </div>
 
         <div className="flex gap-8">
-          <aside className="w-72 flex-shrink-0">
+          <aside className="w-72 shrink-0">
             <div className="bg-white rounded-2xl shadow-sm p-6 sticky top-24">
               <div className="mb-6">
                 <div className="relative">

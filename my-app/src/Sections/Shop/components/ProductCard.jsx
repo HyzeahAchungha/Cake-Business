@@ -15,7 +15,7 @@ const ProductCard = ({ product, onAddClick }) => {
         <div className="absolute top-3 left-3 bg-white px-3 py-1 rounded-full text-xs font-bold text-purple-700 uppercase">
           {product.category}
         </div>
-        <div className={`absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t transition-all duration-300 ${isHovered ? 'from-purple-700/80 to-transparent' : 'from-black/20 to-transparent'}`}>
+        <div className={`absolute bottom-0 left-0 right-0 h-1/3 bg-linear-to-t transition-all duration-300 ${isHovered ? 'from-purple-700/80 to-transparent' : 'from-black/20 to-transparent'}`}>
           {isHovered && (
             <div className="absolute bottom-4 right-4">
               <button onClick={() => onAddClick(product)} className="bg-white text-purple-700 p-3 rounded-full hover:bg-purple-700 hover:text-white transition-all shadow-lg">
@@ -31,7 +31,7 @@ const ProductCard = ({ product, onAddClick }) => {
         <div className="flex items-center justify-between">
           <div>
             <span className="text-xs text-gray-500 uppercase block">Starting from</span>
-            <p className="text-2xl font-bold text-purple-700">Ghc {product.price}</p>
+            <p className="text-2xl font-bold text-purple-700">CFA {product.price}</p>
           </div>
         </div>
       </div>

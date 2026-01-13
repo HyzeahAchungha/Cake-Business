@@ -3,11 +3,29 @@ import { Search, ShoppingCart, X, Plus, Minus, ArrowLeft, MapPin, Calendar, Tras
 const ProductModal = ({ product, onClose, onAddToCart }) => {
   const [selectedType, setSelectedType] = useState(product.types[0] || '');
   const [quantity, setQuantity] = useState(1);
+  const [selectedToppings, setSelectedToppings] = useState([]);
+  const [frostingType, setFrostingType] = useState('Buttercream');
+  const [preferredColors, setPreferredColors] = useState('');
+  const [inscription, setInscription] = useState('');
+  const [otherToppings, setOtherToppings] = useState('');
+
+  const toggleTopping = (topping) => {
+    setSelectedToppings(prev =>
+      prev.includes(topping)
+        ? prev.filter(t => t !== topping)
+        : [...prev, topping]
+    );
+  }
 
   const handleAddToCart = () => {
     onAddToCart({
       ...product,
       selectedType,
+      selectedToppings,
+      frostingType,
+      preferredColors,
+      inscription,
+      otherToppings,
       quantity,
       cartId: Date.now()
     });
@@ -21,7 +39,7 @@ const ProductModal = ({ product, onClose, onAddToCart }) => {
           <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
         </div>
         <div className="w-3/5 flex flex-col">
-          <div className="p-6 border-b flex justify-between items-start flex-shrink-0">
+          <div className="p-6 border-b flex justify-between items-start shrink-0">
             <div>
               <span className="text-purple-700 text-sm font-bold uppercase tracking-wide">{product.category}</span>
               <h2 className="text-3xl font-bold text-gray-900 mt-1">{product.name}</h2>
@@ -44,8 +62,90 @@ const ProductModal = ({ product, onClose, onAddToCart }) => {
                 </div>
               </div>
             )}
+
+            {/* Toppings */}
+            {product.toppings.length > 0 && (
+              <>
+                <div className="mb-6">
+                  <h3 className="font-semibold mb-3 flex items-center gap-2">
+                    <span className="text-gray-400">🎨</span> DESIGN YOUR CAKE
+                  </h3>
+
+                  <div className="mb-4">
+                    <label className="block text-sm font-medium mb-2">Frosting Type</label>
+                    <div className="flex gap-2">
+                      <button
+                        onClick={() => setFrostingType('Buttercream')}
+                        className={`px-4 py-2 rounded-full border-2 flex-1 ${frostingType === 'Buttercream' ? 'border-purple-700 bg-purple-700 text-white' : 'border-gray-300'
+                          }`}
+                      >
+                        Buttercream
+                      </button>
+                      <button
+                        onClick={() => setFrostingType('Whipped Cream')}
+                        className={`px-4 py-2 rounded-full border-2 flex-1 ${frostingType === 'Whipped Cream' ? 'border-purple-700 bg-purple-700 text-white' : 'border-gray-300'
+                          }`}
+                      >
+                        Whipped Cream
+                      </button>
+                    </div>
+                  </div>
+
+                  <div className="mb-4">
+                    <label className="block text-sm font-medium mb-2">Preferred Color(s)</label>
+                    <input
+                      type="text"
+                      value={preferredColors}
+                      onChange={(e) => setPreferredColors(e.target.value)}
+                      placeholder="e.g. Pastel Pink and Gold"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    />
+                  </div>
+
+                  <div className="mb-4">
+                    <label className="block text-sm font-medium mb-2">
+                      Inscription / Message <span className="text-gray-400 text-xs">(Optional)</span>
+                    </label>
+                    <input
+                      type="text"
+                      value={inscription}
+                      onChange={(e) => setInscription(e.target.value)}
+                      placeholder="e.g. Happy Birthday Mama"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    />
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <h3 className="font-semibold mb-3">
+                    Extra Toppings <span className="text-orange-500 text-sm">+ Cost applies</span>
+                  </h3>
+                  <div className="grid grid-cols-2 gap-2">
+                    {product.toppings.map(topping => (
+                      <label key={topping} className="flex items-center gap-2 cursor-pointer">
+                        <input
+                          type="checkbox"
+                          checked={selectedToppings.includes(topping)}
+                          onChange={() => toggleTopping(topping)}
+                          className="w-4 h-4 text-purple-700 rounded focus:ring-purple-500"
+                        />
+                        <span className="text-sm">{topping}</span>
+                      </label>
+                    ))}
+                  </div>
+                  <input
+                    type="text"
+                    value={otherToppings}
+                    onChange={(e) => setOtherToppings(e.target.value)}
+                    placeholder="Other toppings or special requests..."
+                    className="w-full mt-3 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  />
+                </div>
+              </>
+            )}
+
           </div>
-          <div className="p-6 border-t space-y-4 flex-shrink-0 bg-gray-50">
+          <div className="p-6 border-t space-y-4 shrink-0 bg-gray-50">
             <div>
               <h3 className="font-semibold text-gray-900 mb-3">Quantity</h3>
               <div className="flex items-center gap-4">
@@ -65,7 +165,7 @@ const ProductModal = ({ product, onClose, onAddToCart }) => {
             <div className="flex items-center justify-between pt-4">
               <div>
                 <span className="text-sm text-gray-500 uppercase block">Total Price</span>
-                <p className="text-4xl font-bold text-gray-900">Ghc {product.price * quantity}</p>
+                <p className="text-3xl font-bold text-gray-900">CFA {product.price * quantity}</p>
               </div>
               <button onClick={handleAddToCart} className="bg-purple-700 hover:bg-purple-800 text-white px-8 py-4 rounded-xl font-semibold flex items-center gap-2 transition-all shadow-lg hover:shadow-xl">
                 <ShoppingCart className="w-5 h-5" />
@@ -78,4 +178,4 @@ const ProductModal = ({ product, onClose, onAddToCart }) => {
     </div>
   );
 };
- export default ProductModal;
+export default ProductModal;
