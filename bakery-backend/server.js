@@ -6,6 +6,9 @@ require('dotenv').config();
 const app = express();
 
 
+app.use(express.json());
+
+
 app.use(cors({
   origin: (origin, callback) => {
     if (!origin) return callback(null, true);
@@ -27,9 +30,17 @@ app.use(cors({
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
+// 🔥 REQUIRED FOR RENDER + EXPRESS
+app.use((req, res, next) => {
+  if (req.method === "OPTIONS") {
+    res.header("Access-Control-Allow-Origin", req.headers.origin || "*");
+    res.header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
+    res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+    return res.sendStatus(200);
+  }
+  next();
+});
 
-
-app.use(express.json());
 
 // Initialize Resend
 const resend = new Resend(process.env.RESEND_API_KEY);
