@@ -5,49 +5,30 @@ require('dotenv').config();
 
 const app = express();
 
-
-const allowedOrigins = [
-  'http://localhost:5173',
-  'https://cake-business-1.onrender.com',
-  process.env.FRONTEND_URL
-].filter(Boolean);
-
-console.log('🌐 Allowed Origins:', allowedOrigins);
-
-app.use(cors({
-  origin: function(origin, callback) {
-    // Allow requests with no origin
-    if (!origin) {
-      console.log('✓ Request with no origin (allowed)');
-      return callback(null, true);
-    }
-    
-    if (allowedOrigins.includes(origin)) {
-      console.log('✓ Allowed origin:', origin);
-      callback(null, true);
-    } else {
-      console.log('❌ Blocked by CORS:', origin);
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-}));
-
-// ✅ Handle preflight OPTIONS requests (fixed)
 app.use((req, res, next) => {
+  const origin = req.headers.origin;
+  const allowedOrigins = [
+    'http://localhost:5173',
+    'https://cake-business-1.onrender.com',
+    process.env.FRONTEND_URL
+  ];
+
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  }
+
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
+
+  // Handle preflight
   if (req.method === 'OPTIONS') {
-    res.header('Access-Control-Allow-Origin', req.headers.origin || '*');
-    res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-    res.header('Access-Control-Allow-Credentials', 'true');
     return res.sendStatus(200);
   }
+
   next();
 });
 
-// Body Parser
 app.use(express.json());
 
 // Initialize Resend
