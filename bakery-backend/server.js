@@ -5,29 +5,15 @@ require('dotenv').config();
 
 const app = express();
 
-app.use((req, res, next) => {
-  const origin = req.headers.origin;
-  const allowedOrigins = [
+app.use(cors({
+  origin: [
     'http://localhost:5173',
-    'https://cake-business-1.onrender.com',
-    process.env.FRONTEND_URL
-  ];
+    'https://cake-business-1.onrender.com'
+  ],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}));
 
-  if (allowedOrigins.includes(origin)) {
-    res.setHeader('Access-Control-Allow-Origin', origin);
-  }
-
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  res.setHeader('Access-Control-Allow-Credentials', 'true');
-
-  // Handle preflight
-  if (req.method === 'OPTIONS') {
-    return res.sendStatus(200);
-  }
-
-  next();
-});
 
 app.use(express.json());
 
