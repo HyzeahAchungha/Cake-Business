@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Search, ShoppingCart } from 'lucide-react';
+import { Search } from 'lucide-react';
 import  CheckoutPage  from "@/Sections/Shop/components/CheckoutPage";
 import  ProductCard  from "@/Sections/Shop/components/ProductCard";
 import  ProductModal  from "@/Sections/Shop/components/ProductModal";
