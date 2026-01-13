@@ -1,4 +1,4 @@
-import { HeroButton } from "@/Sections/HeroSection/Components/HeroButton";
+import { HeroButton } from "@/Sections/HeroSection/components/HeroButton";
 
 export const HeroContent = () => {
   return (
