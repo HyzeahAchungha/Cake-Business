@@ -6,28 +6,25 @@ require('dotenv').config();
 const app = express();
 
 
-// CORS Configuration - Allow your frontend
-const allowedOrigins = [         
-  'http://localhost:5173',          
-  'https://cake-business-1.onrender.com',  
-  process.env.FRONTEND_URL          
-].filter(Boolean);
-
 app.use(cors({
-  origin: function(origin, callback) {
-    // Allow requests with no origin (mobile apps, Postman, etc.)
+  origin: (origin, callback) => {
     if (!origin) return callback(null, true);
-    
-    if (allowedOrigins.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      console.log('❌ Blocked by CORS:', origin);
-      callback(new Error('Not allowed by CORS'));
+
+    const allowedOrigins = [
+      "http://localhost:5173",
+      "https://cake-business-1.onrender.com",
+      process.env.FRONTEND_URL
+    ].filter(Boolean);
+
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
     }
+
+    console.log("❌ Blocked by CORS:", origin);
+    return callback(null, false);
   },
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
 
@@ -277,7 +274,7 @@ app.post('/api/orders', async (req, res) => {
               <p>📞 Call: <strong>+237 ${process.env.OWNER_PHONE || 'XXX XXX XXX'}</strong></p>
               <p>📧 Email: <strong>${process.env.OWNER_EMAIL}</strong></p>
               <p style="color: #9CA3AF; font-size: 12px; margin-top: 20px;">
-                © ${new Date().getFullYear()} The 3Bs Bakery. All rights reserved.
+                © ${new Date().getFullYear()} NiNi Nayah Bakery. All rights reserved.
               </p>
             </div>
           </div>
@@ -290,7 +287,7 @@ app.post('/api/orders', async (req, res) => {
     // SEND NOTIFICATION TO BAKERY OWNER
     // ============================================
     await resend.emails.send({
-      from: '3 Best Sisters Orders <onboarding@resend.dev>',
+      from: 'NiNi Nayah Orders <onboarding@resend.dev>',
       to: process.env.OWNER_EMAIL,
       subject: `🔔 NEW ORDER - ${orderRef}`,
       html: `
