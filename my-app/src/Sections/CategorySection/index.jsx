@@ -1,4 +1,4 @@
-import { CategoryCarousel } from "@/Sections/CategorySection/components/CategoryCarousel";
+import { CategoryCarousel } from "../CategorySection/Components/CategoryCarousel";
 
 export const CategorySection = () => {
   return (
