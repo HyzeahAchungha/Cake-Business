@@ -4,7 +4,7 @@ import { HeroContent } from "@/Sections/HeroSection/components/HeroContent";
 
 export const HeroSection = () => {
   return (
-    <section className="relative box-border caret-transparent h-[700px] w-full overflow-hidden">
+    <section className="relative box-border caret-transparent h-175 w-full overflow-hidden">
       <HeroVideo />
       <HeroContent />
     </section>
