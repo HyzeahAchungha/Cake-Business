@@ -51,7 +51,7 @@ const CheckoutPage = ({ cartItems = [], onBack }) => {
 
   const sendOrderToBackend = async () => {
     try {
-      const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
+      const backendUrl = import.meta.env.VITE_BACKEND_URL || 'https://cake-business-8azn.onrender.com';
       
       const response = await fetch(`${backendUrl}/api/orders`, {
         method: 'POST',
