@@ -6,20 +6,19 @@ require('dotenv').config();
 const app = express();
 
 
-const allowedOrigins = [
-  'http://localhost:5173', // local dev
-  'https://cake-business-1.onrender.com',
-  process.env.FRONTEND_URL
+// CORS Configuration - Allow your frontend
+const allowedOrigins = [         
+  'http://localhost:5173',          
+  'https://cake-business-1.onrender.com',  
+  process.env.FRONTEND_URL          
 ].filter(Boolean);
-
-console.log('Allowed Origins:', allowedOrigins);
 
 app.use(cors({
   origin: function(origin, callback) {
-    // allow requests with no origin (curl, Postman, mobile apps)
+    // Allow requests with no origin (mobile apps, Postman, etc.)
     if (!origin) return callback(null, true);
-
-    if (allowedOrigins.includes(origin)) {
+    
+    if (allowedOrigins.indexOf(origin) !== -1) {
       callback(null, true);
     } else {
       console.log('❌ Blocked by CORS:', origin);
@@ -27,16 +26,8 @@ app.use(cors({
     }
   },
   credentials: true,
-  methods: ['GET','POST','PUT','DELETE','OPTIONS'],
-  allowedHeaders: ['Content-Type','Authorization']
-}));
-
-// Ensure OPTIONS (preflight) requests are handled
-app.options('*', cors({
-  origin: allowedOrigins,
-  credentials: true,
-  methods: ['GET','POST','PUT','DELETE','OPTIONS'],
-  allowedHeaders: ['Content-Type','Authorization']
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 
