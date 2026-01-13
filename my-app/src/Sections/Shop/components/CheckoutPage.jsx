@@ -51,7 +51,7 @@ const CheckoutPage = ({ cartItems = [], onBack }) => {
 
   const sendOrderToBackend = async () => {
     try {
-      const backendUrl = import.meta.env.VITE_BACKEND_URL || 'https://cake-business-8azn.onrender.com';
+      const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
       
       const response = await fetch(`${backendUrl}/api/orders`, {
         method: 'POST',
@@ -113,14 +113,7 @@ const CheckoutPage = ({ cartItems = [], onBack }) => {
   if (orderComplete) {
     return (
       <div className="min-h-screen bg-gray-50">
-        <header className="bg-white shadow-sm sticky top-0 z-40">
-          <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <ShoppingCart className="w-8 h-8 text-purple-700" />
-              <span className="text-2xl font-bold text-purple-700">NiNi Nayah Bakery</span>
-            </div>
-          </div>
-        </header>
+        
 
         <div className="max-w-3xl mx-auto px-6 py-20 text-center">
           <div className="bg-white rounded-3xl shadow-lg p-12">
@@ -191,18 +184,7 @@ const CheckoutPage = ({ cartItems = [], onBack }) => {
   // Checkout form view
   return (
     <div className="min-h-screen bg-gray-50">
-      <header className="bg-white shadow-sm sticky top-0 z-40">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <ShoppingCart className="w-8 h-8 text-purple-700" />
-            <span className="text-2xl font-bold text-purple-700">NiNi Nayah Bakery</span>
-          </div>
-          <div className="flex items-center gap-2 text-green-700">
-            <Shield className="w-5 h-5" />
-            <span className="text-sm font-medium">Secure Order</span>
-          </div>
-        </div>
-      </header>
+      
 
       <div className="max-w-7xl mx-auto px-6 py-10">
         <button onClick={onBack} className="flex items-center gap-2 text-gray-600 hover:text-purple-700 mb-8 font-medium transition-colors">
