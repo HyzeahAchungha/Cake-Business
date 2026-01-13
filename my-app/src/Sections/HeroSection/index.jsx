@@ -1,5 +1,6 @@
-import { HeroVideo } from "./Components/HeroVideo";
-import { HeroContent } from "./Components/HeroContent";
+import { HeroVideo } from "@/Sections/HeroSection/components/HeroVideo";
+import { HeroContent } from "@/Sections/HeroSection/components/HeroContent";
+
 
 export const HeroSection = () => {
   return (

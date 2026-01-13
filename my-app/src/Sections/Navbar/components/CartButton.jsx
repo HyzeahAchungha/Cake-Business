@@ -1,4 +1,4 @@
-import shoppingbag from "../../../../src/assets/shopping-bag.svg";
+import shoppingbag from "@/assets/shopping-bag.svg";
 import { useCart } from "@/context/CartContext";
 export const CartButton = () => {
   const { cartItems, setIsCartOpen } = useCart();

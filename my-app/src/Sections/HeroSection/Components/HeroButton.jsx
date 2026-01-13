@@ -1,4 +1,5 @@
-import shoppingbag from "../../../../src/assets/shopping-bag.svg";
+import shoppingbag from "@/assets/shopping-bag.svg";
+
 import { Link } from 'react-router-dom';
 export const HeroButton = () => {
   return (
