@@ -10,16 +10,16 @@ const ProductCard = ({ product, onAddClick }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative h-72 overflow-hidden">
+      <div className="relative h-48 sm:h-64 md:h-64 lg:h-72  overflow-hidden">
         <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
         <div className="absolute top-3 left-3 bg-white px-3 py-1 rounded-full text-xs font-bold text-purple-700 uppercase">
           {product.category}
         </div>
         <div className={`absolute bottom-0 left-0 right-0 h-1/3 bg-linear-to-t transition-all duration-300 ${isHovered ? 'from-purple-700/80 to-transparent' : 'from-black/20 to-transparent'}`}>
-          {isHovered && (
+          {(isHovered || window.innerWidth < 1024) && (
             <div className="absolute bottom-4 right-4">
               <button onClick={() => onAddClick(product)} className="bg-white text-purple-700 p-3 rounded-full hover:bg-purple-700 hover:text-white transition-all shadow-lg">
-                <Plus className="w-6 h-6" />
+                <Plus className="w-6 h-6 sm:w-6 sm:h-6" />
               </button>
             </div>
           )}

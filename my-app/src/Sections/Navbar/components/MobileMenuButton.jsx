@@ -1,11 +1,84 @@
+import { useState } from 'react';
+import { Menu, X, Home, ShoppingBag, Info, Phone, User } from 'lucide-react';
+
 export const MobileMenuButton = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Navigation items
+  const navItems = [
+    { name: 'Home', icon: Home, href: '/' },
+    { name: 'Shop', icon: ShoppingBag, href: '/shop' },
+    { name: 'About', icon: Info, href: '/about' },
+    { name: 'Contact', icon: Phone, href: '/contact' },
+    { name: 'Account', icon: User, href: '/account' },
+  ];
+
+  const handleNavClick = (href) => {
+    // Navigate to page (adjust based on your routing)
+    window.location.href = href;
+    // Close drawer
+    setIsOpen(false);
+  };
+
   return (
-    <button className="text-[lab(35.6337_-1.58697_-10.8425)] bg-transparent caret-transparent block min-h-auto min-w-auto">
-      <img
-        src="https://c.animaapp.com/mk2d2gqt1asXsp/assets/icon-3.svg"
-        alt="Icon"
-        className="box-border caret-transparent h-5 w-5"
-      />
-    </button>
+    <>
+      {/* Mobile Menu Button - Only shows on small screens */}
+      <button
+        onClick={() => setIsOpen(true)}
+        className="md:hidden text-gray-700 hover:text-purple-700 transition-colors p-2"
+        aria-label="Open menu"
+      >
+        <Menu className="h-6 w-6" />
+      </button>
+
+      {/* Overlay - Darkens background when drawer is open */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden "
+          onClick={() => setIsOpen(false)}
+        />
+      )}
+
+      {/* Drawer - Slides in from right */}
+      {isOpen && (
+        <div
+          className={`fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out lg:hidden ${
+            isOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
+        >
+          {/* Drawer Header */}
+          <div className="flex items-center justify-between p-4 border-b border-gray-200 bg-white">
+            <h2 className="text-xl font-bold text-purple-700">Menu</h2>
+            <button
+              onClick={() => setIsOpen(false)}
+              className="text-gray-500 hover:text-gray-700 transition-colors"
+              aria-label="Close menu"
+            >
+              <X className="h-6 w-6" />
+            </button>
+          </div>
+
+          {/* Navigation Items */}
+          <nav className="p-4 bg-white">
+            <ul className="space-y-2">
+              {navItems.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <li key={item.name}>
+                    <button
+                      onClick={() => handleNavClick(item.href)}
+                      className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-all"
+                    >
+                      <Icon className="h-5 w-5" />
+                      <span className="font-medium">{item.name}</span>
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+        </div>
+      )}
+    </>
   );
 };

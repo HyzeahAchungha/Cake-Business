@@ -34,28 +34,28 @@ const ProductModal = ({ product, onClose, onAddToCart }) => {
 
   return (
     <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-2xl max-w-5xl w-full max-h-[95vh] overflow-hidden flex shadow-2xl">
-        <div className="w-2/5 relative">
+      <div className="bg-white rounded-2xl max-w-5xl w-full max-h-[95vh] overflow-y-auto md:overflow-hidden flex flex-col md:flex-row shadow-2xl">
+        <div className="w-full md:w-2/5 h-56 md:h-auto relative">
           <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
         </div>
-        <div className="w-3/5 flex flex-col">
+        <div className="w-full md:w-3/5 flex flex-col">
           <div className="p-6 border-b flex justify-between items-start shrink-0">
             <div>
               <span className="text-purple-700 text-sm font-bold uppercase tracking-wide">{product.category}</span>
-              <h2 className="text-3xl font-bold text-gray-900 mt-1">{product.name}</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mt-1 sm:text-2xl md:text-3xl">{product.name}</h2>
               <p className="text-gray-600 mt-2">{product.description}</p>
             </div>
             <button onClick={onClose} className="text-gray-400 hover:text-gray-600 transition-colors p-1">
               <X className="w-6 h-6" />
             </button>
           </div>
-          <div className="flex-1 overflow-y-auto p-6 space-y-6">
+          <div className="flex-1 overflow-y-auto p-9 md:p-6 space-y-6">
             {product.types.length > 0 && (
               <div>
                 <h3 className="font-semibold text-gray-900 mb-3">Select Type</h3>
                 <div className="flex gap-2 flex-wrap">
                   {product.types.map(type => (
-                    <button key={type} onClick={() => setSelectedType(type)} className={`px-5 py-2.5 rounded-full border-2 transition-all font-medium ${selectedType === type ? 'border-purple-700 bg-purple-700 text-white shadow-md' : 'border-gray-300 text-gray-700 hover:border-purple-300'}`}>
+                    <button key={type} onClick={() => setSelectedType(type)} className={`px-5 py-2.5 rounded-full border-2 transition-all font-medium  text-xs sm:text-sm ${selectedType === type ? 'border-purple-700 bg-purple-700 text-white shadow-md' : 'border-gray-300 text-gray-700 hover:border-purple-300'}`}>
                       {type}
                     </button>
                   ))}
@@ -76,14 +76,14 @@ const ProductModal = ({ product, onClose, onAddToCart }) => {
                     <div className="flex gap-2">
                       <button
                         onClick={() => setFrostingType('Buttercream')}
-                        className={`px-4 py-2 rounded-full border-2 flex-1 ${frostingType === 'Buttercream' ? 'border-purple-700 bg-purple-700 text-white' : 'border-gray-300'
+                        className={`px-4 py-2 rounded-full border-2 flex-1  text-xs sm:text-sm ${frostingType === 'Buttercream' ? 'border-purple-700 bg-purple-700 text-white' : 'border-gray-300'
                           }`}
                       >
                         Buttercream
                       </button>
                       <button
                         onClick={() => setFrostingType('Whipped Cream')}
-                        className={`px-4 py-2 rounded-full border-2 flex-1 ${frostingType === 'Whipped Cream' ? 'border-purple-700 bg-purple-700 text-white' : 'border-gray-300'
+                        className={`px-4 py-2 rounded-full border-2 flex-1  text-xs sm:text-sm ${frostingType === 'Whipped Cream' ? 'border-purple-700 bg-purple-700 text-white' : 'border-gray-300 '
                           }`}
                       >
                         Whipped Cream
@@ -167,7 +167,7 @@ const ProductModal = ({ product, onClose, onAddToCart }) => {
                 <span className="text-sm text-gray-500 uppercase block">Total Price</span>
                 <p className="text-3xl font-bold text-gray-900">CFA {product.price * quantity}</p>
               </div>
-              <button onClick={handleAddToCart} className="bg-purple-700 hover:bg-purple-800 text-white px-8 py-4 rounded-xl font-semibold flex items-center gap-2 transition-all shadow-lg hover:shadow-xl">
+              <button onClick={handleAddToCart} className="bg-purple-700 hover:bg-purple-800 text-white px-5 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold text-sm sm:text-base flex items-center gap-2 transition-all shadow-lg hover:shadow-xl">
                 <ShoppingCart className="w-5 h-5" />
                 Add to Order
               </button>

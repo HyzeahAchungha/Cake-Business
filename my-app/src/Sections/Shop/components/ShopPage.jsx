@@ -145,8 +145,8 @@ export default function ShopPage() {
           <p className="text-gray-600 text-lg">{filteredProducts.length} delicacies found</p>
         </div>
 
-        <div className="flex gap-8">
-          <aside className="w-72 shrink-0">
+        <div className="flex flex-col md:flex-row gap-8">
+          <aside className="hidden md:block w-72 shrink-0">
             <div className="bg-white rounded-2xl shadow-sm p-6 sticky top-24">
               <div className="mb-6">
                 <div className="relative">
@@ -154,7 +154,7 @@ export default function ShopPage() {
                   <input type="text" placeholder="Search for cakes, pastries..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="w-full pl-12 pr-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500" />
                 </div>
               </div>
-              <div className="space-y-2">
+              <div className="space-y-2 ">
                 {categories.map(category => (
                   <button key={category} onClick={() => setSelectedCategory(category)} className={`w-full text-left px-5 py-3 rounded-xl transition-all font-medium ${selectedCategory === category ? 'bg-purple-700 text-white shadow-lg' : 'text-gray-700 hover:bg-purple-50'}`}>
                     {category}
@@ -165,7 +165,7 @@ export default function ShopPage() {
           </aside>
 
           <main className="flex-1">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6  ">
               {filteredProducts.map(product => (
                 <ProductCard key={product.id} product={product} onAddClick={setSelectedProduct} />
               ))}

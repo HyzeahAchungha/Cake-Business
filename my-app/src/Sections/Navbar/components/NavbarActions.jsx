@@ -7,7 +7,8 @@ export const NavbarActions = () => {
     <div className="items-center box-border caret-transparent gap-x-4 flex gap-y-4">
       <SearchButton />
       <CartButton />
-      {/* <MobileMenuButton /> */}
+      <MobileMenuButton />
+      
     </div>
   );
 };
