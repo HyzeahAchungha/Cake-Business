@@ -1,6 +1,6 @@
 export const FooterSocial = () => {
   return (
-    <div className="items-center box-border caret-transparent gap-x-2 flex gap-y-2">
+    <div className="flex flex-wrap justify-center md:justify-start gap-2">
       <a
         href="https://www.tiktok.com/@the.3bsbakery0?_r=1&_t=ZN-92HJD19nIpk"
         className="text-[lab(64.5597_64.3615_-12.7988)] bg-[oklab(0.999994_0.0000455678_0.0000200868/0.1)] box-border caret-transparent block p-2 rounded-[3.35544e+07px]"
