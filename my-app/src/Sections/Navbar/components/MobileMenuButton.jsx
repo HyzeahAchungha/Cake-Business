@@ -8,9 +8,9 @@ export const MobileMenuButton = () => {
   const navItems = [
     { name: 'Home', icon: Home, href: '/' },
     { name: 'Shop', icon: ShoppingBag, href: '/shop' },
-    { name: 'About', icon: Info, href: '/about' },
-    { name: 'Contact', icon: Phone, href: '/contact' },
-    { name: 'Account', icon: User, href: '/account' },
+    { name: 'Our Story', icon: Info, href: '/ourstories' },
+    { name: 'Gallery', icon: Phone, href: '/gallery' },
+    
   ];
 
   const handleNavClick = (href) => {
