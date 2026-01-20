@@ -1,4 +1,9 @@
 import { CategoryCard } from "@/Sections/CategorySection/Components/CategoryCard";
+import category1 from '@/assets/images/category1.jpg';
+import category2 from '@/assets/images/category2.jpg';
+import category3 from '@/assets/images/category3.jpg';
+import cupcake17 from '@/assets/images/cupcake17.jpg';
+
 
 export const CategoryCarousel = () => {
   return (
@@ -7,22 +12,22 @@ export const CategoryCarousel = () => {
         <CategoryCard
           category="bento"
           title="Bento Cakes"
-          imageUrl="https://www.the3bsbakery.store/_next/image?url=%2Fimages%2Fbento-cake.png&w=3840&q=75"
+          imageUrl={category1}
         />
         <CategoryCard
           category="wedding"
           title="Wedding"
-          imageUrl="https://www.the3bsbakery.store/_next/image?url=%2Fimages%2Fwedding.jpg&w=3840&q=75"
+          imageUrl={category2}
         />
         <CategoryCard
           category="cupcakes"
           title="Cupcakes"
-          imageUrl="https://www.the3bsbakery.store/_next/image?url=%2Fimages%2Fcup-cake.jpg&w=3840&q=75"
+          imageUrl={cupcake17}
         />
         <CategoryCard
           category="custom"
           title="Custom"
-          imageUrl="https://www.the3bsbakery.store/_next/image?url=%2Fimages%2Fcustom.jpg&w=3840&q=75"
+          imageUrl={category3}
         />
         <CategoryCard
           category="donuts"
