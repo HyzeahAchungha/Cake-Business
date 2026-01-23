@@ -16,6 +16,7 @@ export type FooterColumnProps = {
   };
   newsletterDescription?: string;
 };
+import { FaLocationDot, FaPhone, FaEnvelope, FaTiktok, FaWhatsapp } from "react-icons/fa6";
 
 export const FooterColumn = (props: FooterColumnProps) => {
   return (
@@ -43,11 +44,7 @@ export const FooterColumn = (props: FooterColumnProps) => {
         <>
           <ul className="text-[oklab(0.901998_0.0376404_-0.0504854/0.8)] box-border caret-transparent list-none mb-6 pl-0">
             <li className="items-start box-border caret-transparent gap-x-3 flex gap-y-3 mb-4">
-              <img
-                src="https://c.animaapp.com/mk2d2gqt1asXsp/assets/icon-6.svg"
-                alt="Icon"
-                className="text-[lab(64.5597_64.3615_-12.7988)] box-border caret-transparent h-5 w-5 mt-1"
-              />
+              <FaLocationDot className="h-5 w-5 mt-1 text-[lab(64.5597_64.3615_-12.7988)]" />
               <span className="box-border caret-transparent block">
                 <span
                   className="box-border caret-transparent block"
@@ -61,21 +58,13 @@ export const FooterColumn = (props: FooterColumnProps) => {
               </span>
             </li>
             <li className="items-center box-border caret-transparent gap-x-3 flex gap-y-3 mb-4">
-              <img
-                src="https://c.animaapp.com/mk2d2gqt1asXsp/assets/icon-7.svg"
-                alt="Icon"
-                className="text-[lab(64.5597_64.3615_-12.7988)] box-border caret-transparent h-5 w-5"
-              />
+                           <FaLocationDot className="h-5 w-5 mt-1 text-[lab(64.5597_64.3615_-12.7988)]" />
               <span className="box-border caret-transparent block">
                 {props.contactInfo.phone}
               </span>
             </li>
             <li className="items-center box-border caret-transparent gap-x-3 flex gap-y-3 mb-4">
-              <img
-                src="https://c.animaapp.com/mk2d2gqt1asXsp/assets/icon-8.svg"
-                alt="Icon"
-                className="text-[lab(64.5597_64.3615_-12.7988)] box-border caret-transparent h-5 w-5"
-              />
+             <FaPhone className="h-5 w-5 text-[lab(64.5597_64.3615_-12.7988)]" />
               <span className="box-border caret-transparent block">
                 <span
                   className="box-border caret-transparent block"
@@ -107,11 +96,8 @@ export const FooterColumn = (props: FooterColumnProps) => {
                 href={props.socialLinks.whatsapp}
                 className="text-[lab(64.5597_64.3615_-12.7988)] bg-[oklab(0.999994_0.0000455678_0.0000200868/0.1)] box-border caret-transparent block p-2 rounded-[3.35544e+07px]"
               >
-                <img
-                  src="https://c.animaapp.com/mk2d2gqt1asXsp/assets/icon-10.svg"
-                  alt="Icon"
-                  className="box-border caret-transparent h-4 w-4"
-                />
+              <FaEnvelope className="h-5 w-5 text-[lab(64.5597_64.3615_-12.7988)]" />
+
               </a>
             )}
           </div>
