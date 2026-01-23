@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, ShoppingCart, X, Plus, Minus, ArrowLeft, MapPin, Calendar, Trash2 } from 'lucide-react';
+import { ShoppingCart, X,  Trash2 } from 'lucide-react';
 const CartSidebar = ({ isOpen, onClose, cartItems, onRemove, onCheckout }) => {
   const subtotal = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 
@@ -32,7 +32,7 @@ const CartSidebar = ({ isOpen, onClose, cartItems, onRemove, onCheckout }) => {
                   <div className="flex-1">
                     <h3 className="font-bold text-gray-900">{item.name}</h3>
                     <p className="text-sm text-gray-500">Qty: {item.quantity} • {item.selectedType || 'Standard'}</p>
-                    <p className="text-purple-700 font-bold mt-1">Ghc {item.price * item.quantity}</p>
+                    <p className="text-purple-700 font-bold mt-1">CFA {item.price * item.quantity}</p>
                   </div>
                   <button onClick={() => onRemove(item.cartId)} className="text-gray-400 hover:text-red-500 transition-colors">
                     <Trash2 className="w-5 h-5" />
@@ -47,7 +47,7 @@ const CartSidebar = ({ isOpen, onClose, cartItems, onRemove, onCheckout }) => {
           <div className="p-6 border-t space-y-4">
             <div className="flex justify-between items-center text-lg">
               <span className="font-semibold text-gray-700">Subtotal</span>
-              <span className="font-bold text-gray-900 text-2xl">Ghc {subtotal}</span>
+              <span className="font-bold text-gray-900 text-2xl">CFA {subtotal}</span>
             </div>
             <button onClick={onCheckout} className="w-full bg-purple-700 hover:bg-purple-800 text-white py-4 rounded-xl font-bold transition-all shadow-lg">
               Proceed to Checkout

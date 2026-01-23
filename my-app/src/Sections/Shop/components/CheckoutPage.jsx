@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { ShoppingCart, ArrowLeft, MapPin, Calendar, Shield, CheckCircle } from 'lucide-react';
+import {  ArrowLeft, MapPin, Calendar, CheckCircle } from 'lucide-react';
 
 const CheckoutPage = ({ cartItems = [], onBack }) => {
   const [formData, setFormData] = useState({

@@ -1,47 +1,51 @@
+import { FaTiktok, FaWhatsapp, FaInstagram, FaFacebookF, FaXTwitter } from "react-icons/fa6";
+
 export const FooterSocial = () => {
   return (
     <div className="flex flex-wrap justify-center md:justify-start gap-2">
+      {/* TikTok */}
       <a
         href="https://www.tiktok.com/@the.3bsbakery0?_r=1&_t=ZN-92HJD19nIpk"
-        className="text-[lab(64.5597_64.3615_-12.7988)] bg-[oklab(0.999994_0.0000455678_0.0000200868/0.1)] box-border caret-transparent block p-2 rounded-[3.35544e+07px]"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="p-2 rounded-full bg-black/10 text-black hover:bg-black hover:text-white transition"
       >
-        <img
-          src="https://c.animaapp.com/mk2d2gqt1asXsp/assets/icon-9.svg"
-          alt="Icon"
-          className="box-border caret-transparent h-4 w-4"
-        />
+        <FaTiktok className="h-4 w-4" />
       </a>
+
+      {/* WhatsApp */}
       <a
         href="https://wa.me/message/PUXCQAPGBFNZ01"
-        className="text-[lab(64.5597_64.3615_-12.7988)] bg-[oklab(0.999994_0.0000455678_0.0000200868/0.1)] box-border caret-transparent block p-2 rounded-[3.35544e+07px]"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="p-2 rounded-full bg-black/10 text-black hover:bg-green-600 hover:text-white transition"
       >
-        <img
-          src="https://c.animaapp.com/mk2d2gqt1asXsp/assets/icon-10.svg"
-          alt="Icon"
-          className="box-border caret-transparent h-4 w-4"
-        />
+        <FaWhatsapp className="h-4 w-4" />
       </a>
-      <div className="text-[oklab(0.999994_0.0000455677_0.0000200868/0.6)] bg-[oklab(0.999994_0.0000455678_0.0000200868/0.05)] box-border caret-transparent p-2 rounded-[3.35544e+07px]">
-        <img
-          src="https://c.animaapp.com/mk2d2gqt1asXsp/assets/icon-11.svg"
-          alt="Icon"
-          className="box-border caret-transparent h-4 w-4"
-        />
-      </div>
-      <div className="text-[oklab(0.999994_0.0000455677_0.0000200868/0.6)] bg-[oklab(0.999994_0.0000455678_0.0000200868/0.05)] box-border caret-transparent p-2 rounded-[3.35544e+07px]">
-        <img
-          src="https://c.animaapp.com/mk2d2gqt1asXsp/assets/icon-12.svg"
-          alt="Icon"
-          className="box-border caret-transparent h-4 w-4"
-        />
-      </div>
-      <div className="text-[oklab(0.999994_0.0000455677_0.0000200868/0.6)] bg-[oklab(0.999994_0.0000455678_0.0000200868/0.05)] box-border caret-transparent p-2 rounded-[3.35544e+07px]">
-        <img
-          src="https://c.animaapp.com/mk2d2gqt1asXsp/assets/icon-13.svg"
-          alt="Icon"
-          className="box-border caret-transparent h-4 w-4"
-        />
-      </div>
+
+      {/* Instagram */}
+      <a
+        href="#"
+        className="p-2 rounded-full bg-black/10 text-black hover:bg-pink-600 hover:text-white transition"
+      >
+        <FaInstagram className="h-4 w-4" />
+      </a>
+
+      {/* Facebook */}
+      <a
+        href="#"
+        className="p-2 rounded-full bg-black/10 text-black hover:bg-blue-600 hover:text-white transition"
+      >
+        <FaFacebookF className="h-4 w-4" />
+      </a>
+
+      {/* X (Twitter) */}
+      <a
+        href="#"
+        className="p-2 rounded-full bg-black/10 text-black hover:bg-black hover:text-white transition"
+      >
+        <FaXTwitter className="h-4 w-4" />
+      </a>
     </div>
   );
 };

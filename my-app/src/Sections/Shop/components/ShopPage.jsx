@@ -45,7 +45,7 @@ const products = [
     name: "Bento 2 Cakes",
     category: "Bento",
     description: "Minimalist aesthetic cakes, perfect for intimate gifting.",
-    price: 150,
+    price: 15000,
      image: category13,
     types: ["Vanilla", "Chocolate", "Red Velvet", "Strawberry"],
     toppings: ["Birthday toppers", "Chocolate drip", "Paper fan", "Faux balls", "Chocolate", "Sprinkles/sugar balls", "Flowers", "Prints", "Candle", "Fondant toppers", "Gold dust painting", "Balloons"]
@@ -55,7 +55,7 @@ const products = [
     name: "Gourmet Cupcakes (Box of 6)",
     category: "Cupcakes",
     description: "Bite-sized luxury in Vanilla, Chocolate, Red Velvet, or Strawberry.",
-    price: 100,
+    price: 10000,
     image: cupcake16,
     types: ["Vanilla", "Chocolate", "Red Velvet", "Strawberry"],
     toppings: []
@@ -65,7 +65,7 @@ const products = [
     name: "Savory Spring Rolls (5 pcs)",
     category: "Spring rolls",
     description: "Crispy or frozen, packed with savory filling.",
-    price: 25,
+    price: 7000,
    image: roll,
     types: [],
     toppings: []
@@ -75,7 +75,7 @@ const products = [
     name: "Premium Loaf Cakes",
     category: "Loaf cakes",
     description: "Moist, dense, and perfect for tea time.",
-    price: 45,
+    price: 10000,
    image: cakebana13,
     types: ["Vanilla", "Chocolate", "Lemon"],
     toppings: []
@@ -85,7 +85,7 @@ const products = [
     name: "Cake Slices",
     category: "Cake slice",
     description: "Grab a slice of heaven on the go.",
-    price: 50,
+    price: 8000,
     image: slice1,
     types: ["Vanilla", "Chocolate", "Red Velvet"],
     toppings: []
