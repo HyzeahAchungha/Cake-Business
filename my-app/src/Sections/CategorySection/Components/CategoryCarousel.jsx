@@ -2,8 +2,13 @@ import { CategoryCard } from "@/Sections/CategorySection/Components/CategoryCard
 import category1 from '@/assets/images/category1.jpg';
 import category2 from '@/assets/images/category2.jpg';
 import category3 from '@/assets/images/category3.jpg';
+import category4 from '@/assets/images/category4.jpg';
+import donut2 from '@/assets/images/donut2.jpeg';
+import category7 from '@/assets/images/category7.jpg';
+import cakebana13 from '@/assets/images/cakebana13.jpg';
 import cupcake17 from '@/assets/images/cupcake17.jpg';
-
+import slice3 from '@/assets/images/slice3.jpeg';
+import rollS from '@/assets/images/rollS.jpeg';
 
 export const CategoryCarousel = () => {
   return (
@@ -32,43 +37,43 @@ export const CategoryCarousel = () => {
         <CategoryCard
           category="donuts"
           title="Donuts"
-          imageUrl="https://www.the3bsbakery.store/_next/image?url=%2Fimages%2Fdonut.png&w=3840&q=75"
+          imageUrl={donut2}
         />
         <CategoryCard
           category="kiddies"
           title="Kiddies"
-          imageUrl="https://www.the3bsbakery.store/_next/image?url=%2Fimages%2Fkiddies.jpg&w=3840&q=75"
+          imageUrl={category7}
         />
         <CategoryCard
           category="spring-rolls"
           title="Spring Rolls"
-          imageUrl="https://www.the3bsbakery.store/_next/image?url=%2Fimages%2Fspring-roll.png&w=3840&q=75"
+          imageUrl={rollS }
         />
         <CategoryCard
           category="loaf"
-          title="Loaf Cakes"
-          imageUrl="https://www.the3bsbakery.store/_next/image?url=%2Fimages%2Floaf.jpg&w=3840&q=75"
+          title="Banana Cakes"
+          imageUrl={cakebana13}
         />
         <CategoryCard
           category="slices"
           title="Slices"
-          imageUrl="https://www.the3bsbakery.store/_next/image?url=%2Fimages%2Fslice.jpg&w=3840&q=75"
+          imageUrl={slice3}
         />
         {/* Duplicate for infinite scroll effect */}
         <CategoryCard
           category="bento"
           title="Bento Cakes"
-          imageUrl="https://www.the3bsbakery.store/_next/image?url=%2Fimages%2Fbento-cake.png&w=3840&q=75"
+          imageUrl={category4}
         />
         <CategoryCard
-          category="wedding"
-          title="Wedding"
-          imageUrl="https://www.the3bsbakery.store/_next/image?url=%2Fimages%2Fwedding.jpg&w=3840&q=75"
+          category="birthday"
+          title="birthday"
+          imageUrl={category1}
         />
         <CategoryCard
           category="cupcakes"
           title="Cupcakes"
-          imageUrl="https://www.the3bsbakery.store/_next/image?url=%2Fimages%2Fcup-cake.jpg&w=3840&q=75"
+          imageUrl={cupcake17}
         />
       </div>
       <div className="absolute bg-[linear-gradient(to_right_in_oklab,rgb(255,255,255)_0%,rgba(0,0,0,0)_100%)] box-border caret-transparent h-full pointer-events-none w-24 z-10 left-0 top-0"></div>

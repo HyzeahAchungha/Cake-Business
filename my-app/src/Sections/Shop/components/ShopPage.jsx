@@ -5,6 +5,39 @@ import  ProductCard  from "@/Sections/Shop/components/ProductCard";
 import  ProductModal  from "@/Sections/Shop/components/ProductModal";
 import CartSidebar  from "@/Sections/Shop/components/CartSidebar";
 import { useCart } from "@/context/CartContext"; 
+import category1 from '@/assets/images/category1.jpg';
+import category2 from '@/assets/images/category2.jpg';
+import category3 from '@/assets/images/category3.jpg';
+import category4 from '@/assets/images/category4.jpg';
+import category5 from '@/assets/images/category5.jpg';
+import category6 from '@/assets/images/category6.jpg';
+import category7 from '@/assets/images/category7.jpg';
+import category8 from '@/assets/images/category8.jpg';
+import category9 from '@/assets/images/category9.jpg';
+import category10 from '@/assets/images/category10.jpg';
+import category11 from '@/assets/images/category11.jpg';
+import category12 from '@/assets/images/category12.jpg';
+import category13 from '@/assets/images/category13.jpg';
+import category14 from '@/assets/images/category14.jpg';
+import cakebana13 from '@/assets/images/cakebana13.jpg';
+import cupcake17 from '@/assets/images/cupcake17.jpg';
+import cupcake15 from '@/assets/images/cupcake15.jpg';
+import cupcake16 from '@/assets/images/cupcake16.jpg'; 
+import roll from '@/assets/images/roll.jpeg';
+import roll1 from '@/assets/images/roll1.jpeg';
+import roll2 from '@/assets/images/roll2.jpeg';
+import roll3 from '@/assets/images/roll3.jpeg';
+import roll5 from '@/assets/images/roll5.jpeg';
+import roll6 from '@/assets/images/roll6.jpeg';
+import rollS from '@/assets/images/rollS.jpeg';
+import slice1 from '@/assets/images/slice1.jpeg';
+import slice3 from '@/assets/images/slice3.jpeg';
+import slice4 from '@/assets/images/slice4.jpeg';
+import slice5 from '@/assets/images/slice5.jpeg';
+import donut from '@/assets/images/donut.jpeg';
+import donut1 from '@/assets/images/donut1.jpeg';
+import donut2 from '@/assets/images/donut2.jpeg';
+ 
 
 const products = [
   {
@@ -13,7 +46,7 @@ const products = [
     category: "Bento",
     description: "Minimalist aesthetic cakes, perfect for intimate gifting.",
     price: 150,
-     image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop",
+     image: category13,
     types: ["Vanilla", "Chocolate", "Red Velvet", "Strawberry"],
     toppings: ["Birthday toppers", "Chocolate drip", "Paper fan", "Faux balls", "Chocolate", "Sprinkles/sugar balls", "Flowers", "Prints", "Candle", "Fondant toppers", "Gold dust painting", "Balloons"]
   },
@@ -23,7 +56,7 @@ const products = [
     category: "Cupcakes",
     description: "Bite-sized luxury in Vanilla, Chocolate, Red Velvet, or Strawberry.",
     price: 100,
-    image: "https://images.unsplash.com/photo-1599785209707-a456fc1337bb?w=400&h=300&fit=crop",
+    image: cupcake16,
     types: ["Vanilla", "Chocolate", "Red Velvet", "Strawberry"],
     toppings: []
   },
@@ -33,7 +66,7 @@ const products = [
     category: "Spring rolls",
     description: "Crispy or frozen, packed with savory filling.",
     price: 25,
-   image: "https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop",
+   image: roll,
     types: [],
     toppings: []
   },
@@ -43,7 +76,7 @@ const products = [
     category: "Loaf cakes",
     description: "Moist, dense, and perfect for tea time.",
     price: 45,
-   image: "https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop",
+   image: cakebana13,
     types: ["Vanilla", "Chocolate", "Lemon"],
     toppings: []
   },
@@ -53,7 +86,7 @@ const products = [
     category: "Cake slice",
     description: "Grab a slice of heaven on the go.",
     price: 50,
-    image: "https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop",
+    image: slice1,
     types: ["Vanilla", "Chocolate", "Red Velvet"],
     toppings: []
   },
@@ -62,8 +95,8 @@ const products = [
     name: "Ring Donuts (15pcs per pack)",
     category: "Ring donut",
     description: "Soft, fluffy donuts. Choose your favorite finish.",
-    price: 30,
-    image: "https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop",
+    price: 6000,
+    image: donut,
     types: ["Glazed", "Chocolate", "Strawberry"],
     toppings: []
   },
@@ -72,9 +105,9 @@ const products = [
     name: "Custom Cakes",
     category: "Customised cakes",
     description: "You dream it, we bake it. Fully personalized designs.",
-    price: 0,
+    price: 20000,
     isCustom: true,
-  image: "https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop",
+  image: category10,
     types: [],
     toppings: []
   },
@@ -83,12 +116,279 @@ const products = [
     name: "Kiddies Themed Cakes",
     category: "Kiddies cake",
     description: "Fun, colorful characters and designs for the little ones.",
-    price: 0,
+    price: 20000,
     isCustom: true,
-   image: "https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop",
+   image: category14,
     types: [],
     toppings: []
-  }
+  },
+   {
+    id: 9,
+    name: "Birthday",
+    category: "Kiddies cake",
+    description: "Fun, colorful characters and designs for the little ones.",
+    price: 15000,
+    isCustom: true,
+   image: category12,
+    types: [],
+    toppings: []
+  },
+  {
+    id: 10,
+    name: "Custom Cakes",
+    category: "Bento",
+    description: "You dream it, we bake it. Fully personalized designs.",
+    price: 15000,
+    isCustom: true,
+  image: category3,
+    types: [],
+    toppings: []
+  },
+  {
+    id: 11,
+    name: "Custom Cakes",
+    category: "Bento",
+    description: "You dream it, we bake it. Fully personalized designs.",
+    price: 15000,
+    isCustom: true,
+  image: category4,
+    types: [],
+    toppings: []
+  },
+  {
+    id: 12,
+    name: "Custom Cakes",
+    category: "Anniversary cakes",
+    description: "You dream it, we bake it. Fully personalized designs.",
+    price: 15000,
+    isCustom: true,
+  image: category6,
+    types: [],
+    toppings: []
+  },
+  {
+    id: 13,
+    name: "Custom Cakes",
+    category: "Anniversary cakes",
+    description: "You dream it, we bake it. Fully personalized designs.",
+    price: 15000,
+    isCustom: true,
+  image: category5,
+    types: [],
+    toppings: []
+  },
+
+   {
+    id: 13,
+    name: "Budget Cake",
+    category: "Budget Cake",
+    description: "You dream it, we bake it. Fully personalized designs.",
+    price: 15000,
+    isCustom: true,
+  image: category7,
+    types: [],
+    toppings: []
+  },
+   {
+    id: 14,
+    name: "Budget Cake",
+    category: "Budget Cake",
+    description: "You dream it, we bake it. Fully personalized designs.",
+    price: 15000,
+    isCustom: true,
+  image: category8,
+    types: [],
+    toppings: []
+  },
+   {
+    id: 15,
+    name: "Regular fondant cakes",
+    category: "Regular fondant cakes",
+    description: "You dream it, we bake it. Fully personalized designs.",
+    price: 15000,
+    isCustom: true,
+  image: category11,
+    types: [],
+    toppings: []
+  },
+   {
+    id: 15,
+    name: "Regular fondant cakes",
+    category: "Regular fondant cakes",
+    description: "You dream it, we bake it. Fully personalized designs.",
+    price: 20000,
+    isCustom: true,
+  image: category12,
+    types: [],
+    toppings: []
+  },
+  {
+    id: 16,
+    name: "chocolate ",
+    category: "Cupcakes",
+    description: "You dream it, we bake it. Fully personalized designs.",
+    price: 20000,
+    isCustom: true,
+  image: cupcake15,
+    types: [],
+    toppings: []
+  },
+
+   {
+    id: 17,
+    name: "chocolate ",
+    category: "Cupcakes",
+    description: "You dream it, we bake it. Fully personalized designs.",
+    price: 20000,
+    isCustom: true,
+  image: cupcake17,
+    types: [],
+    toppings: []
+  },
+  {
+    id: 18,
+    name: "Custom Cakes",
+    category: "Customised cakes",
+    description: "You dream it, we bake it. Fully personalized designs.",
+    price: 15000,
+    isCustom: true,
+  image: category9,
+    types: [],
+    toppings: []
+  },
+  {
+    id: 19,
+    name: "Birthday",
+    category: "Kiddies cake",
+    description: "Fun, colorful characters and designs for the little ones.",
+    price: 20000,
+    isCustom: true,
+   image: category1,
+    types: [],
+    toppings: []
+  },
+  {
+    id: 20,
+    name: "Graduation",
+    category: "Anniversary cakes",
+    description: "You dream it, we bake it. Fully personalized designs.",
+    price: 20000,
+    isCustom: true,
+  image: category2,
+    types: [],
+    toppings: []
+  },
+   {
+    id: 21,
+    name: "Cake Slices",
+    category: "Cake slice",
+    description: "Grab a slice of heaven on the go.",
+    price: 12500,
+    image: slice3,
+    types: ["Vanilla", "Chocolate", "Red Velvet"],
+    toppings: []
+  },
+   {
+    id: 22,
+    name: "Cake Slices",
+    category: "Cake slice",
+    description: "Grab a slice of heaven on the go.",
+    price: 12500,
+    image: slice4,
+    types: ["Vanilla", "Chocolate", "Red Velvet"],
+    toppings: []
+  },
+   {
+    id: 23,
+    name: "Cake Slices",
+    category: "Cake slice",
+    description: "Grab a slice of heaven on the go.",
+    price: 12500,
+    image: slice5,
+    types: ["Vanilla", "Chocolate", "Red Velvet"],
+    toppings: []
+  },
+
+  {
+    id: 24,
+    name: "Savory Spring Rolls (5 pcs)",
+    category: "Spring rolls",
+    description: "Crispy or frozen, packed with savory filling.",
+    price: 20000,
+   image: rollS,
+    types: [],
+    toppings: []
+  },
+  {
+    id: 24,
+    name: "Savory Spring Rolls (5 pcs)",
+    category: "Spring rolls",
+    description: "Crispy or frozen, packed with savory filling.",
+    price: 20000,
+   image: roll1,
+    types: [],
+    toppings: []
+  },
+  {
+    id: 25,
+    name: "Savory Spring Rolls (5 pcs)",
+    category: "Spring rolls",
+    description: "Crispy or frozen, packed with savory filling.",
+    price: 20000,
+   image: roll2,
+    types: [],
+    toppings: []
+  },
+  {
+    id: 26,
+    name: "Savory Spring Rolls (5 pcs)",
+    category: "Spring rolls",
+    description: "Crispy or frozen, packed with savory filling.",
+    price: 20000,
+   image: roll3,
+    types: [],
+    toppings: []
+  },
+  {
+    id: 27,
+    name: "Savory Spring Rolls (5 pcs)",
+    category: "Spring rolls",
+    description: "Crispy or frozen, packed with savory filling.",
+    price: 20000,
+   image: roll5,
+    types: [],
+    toppings: []
+  },
+  {
+    id: 28,
+    name: "Savory Spring Rolls (5 pcs)",
+    category: "Spring rolls",
+    description: "Crispy or frozen, packed with savory filling.",
+    price: 20000,
+   image: roll6,
+    types: [],
+    toppings: []
+  },
+  {
+    id: 29,
+    name: "Ring Donuts (15pcs per pack)",
+    category: "Ring donut",
+    description: "Soft, fluffy donuts. Choose your favorite finish.",
+    price: 6000,
+    image: donut1,
+    types: ["Glazed", "Chocolate", "Strawberry"],
+    toppings: []
+  },
+  {
+    id: 30,
+    name: "Ring Donuts (15pcs per pack)",
+    category: "Ring donut",
+    description: "Soft, fluffy donuts. Choose your favorite finish.",
+    price: 6000,
+    image: donut2,
+    types: ["Glazed", "Chocolate", "Strawberry"],
+    toppings: []
+  },
 ];
 
 const categories = [
@@ -98,7 +398,6 @@ const categories = [
   "Spring rolls",
   "Loaf cakes",
   "Cake slice",
-  "Basic Cake",
   "Ring donut",
   "Customised cakes",
   "Kiddies cake",

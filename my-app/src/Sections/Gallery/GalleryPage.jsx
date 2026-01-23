@@ -1,49 +1,48 @@
 import React, { useState } from 'react';
-import cake1 from '@/assets/images/cake-gal1.jpeg';
-import cake2 from '@/assets/images/cake-gal2.jpeg';
-import cake3 from '@/assets/images/cake-gal3.jpeg';
-import cake4 from '@/assets/images/cake-gal4.jpeg';
-import cake5 from '@/assets/images/cake-gal5.jpeg';
-import cake6 from '@/assets/images/cake-gal6.jpeg';
-import cake7 from '@/assets/images/cake-gal23.jpeg';
-import cake8 from '@/assets/images/cake-gal8.jpeg';
-import cake9 from '@/assets/images/cake-gal9.jpeg';
-import cake10 from '@/assets/images/cake-gal24.jpeg';
-import cake11 from '@/assets/images/cake-gal19.jpeg';
-import cake12 from '@/assets/images/cake-gal20.jpeg';
-import cake13 from '@/assets/images/cake-gal13.jpeg';
-import cake14 from '@/assets/images/cake-gal21.jpeg';
-import cake15 from '@/assets/images/cake-gal15.jpeg';
+import category1 from '@/assets/images/category1.jpg';
+import category2 from '@/assets/images/category2.jpg';
+import category3 from '@/assets/images/category3.jpg';
+import category4 from '@/assets/images/category4.jpg';
+import category5 from '@/assets/images/category5.jpg';
+import category6 from '@/assets/images/category6.jpg';
+import category7 from '@/assets/images/category7.jpg';
+import category8 from '@/assets/images/category8.jpg';
+import category9 from '@/assets/images/category9.jpg';
+import category10 from '@/assets/images/category10.jpg';
+import category11 from '@/assets/images/category11.jpg';
+import category12 from '@/assets/images/category12.jpg';
+import category13 from '@/assets/images/category13.jpg';
+import category14 from '@/assets/images/category14.jpg';
 import motion1 from '@/assets/videos/motion1.mp4';
 import motion1Thumb from '@/assets/images/cup-cake.jpg'
 
 const galleryItems = [
-  { id: 1, type: 'image', src: cake1, alt: 'Bento cake with pink frosting', height: 'tall' },
-  { id: 3, type: 'image', src: cake3, alt: 'Birthday cake with candles', height: 'medium' },
-  { id: 2, type: 'image', src: cake4, alt: 'Bento cakes set', height: 'short' },
-  { id: 4, type: 'image', src: cake5, alt: 'Custom message cake', height: 'medium' },
+  { id: 1, type: 'image', src: category1, alt: 'Bento cake with pink frosting', height: 'tall' },
+  { id: 3, type: 'image', src: category2, alt: 'Birthday cake with candles', height: 'medium' },
+  { id: 2, type: 'image', src: category3, alt: 'Bento cakes set', height: 'short' },
+  { id: 4, type: 'image', src: category4, alt: 'Custom message cake', height: 'medium' },
 
 
-  { id: 5, type: 'image', src: cake2, alt: 'Purple heart cake', height: 'tall' },
-  { id: 6, type: 'image', src: cake6, alt: 'Pink and white split cake', height: 'tall' },
-  { id: 7, type: 'image', src: cake7, alt: 'Minnie Mouse cake', height: 'tall' },
-  { id: 8, type: 'image', src: cake8, alt: 'Frozen themed cake', height: 'tall' },
+  { id: 5, type: 'image', src: category5, alt: 'Purple heart cake', height: 'tall' },
+  { id: 6, type: 'image', src: category6, alt: 'Pink and white split cake', height: 'tall' },
+  { id: 7, type: 'image', src: category7, alt: 'Minnie Mouse cake', height: 'tall' },
+  { id: 8, type: 'image', src: category8, alt: 'Frozen themed cake', height: 'tall' },
 
 
-  { id: 9, type: 'image', src: cake9, alt: 'Proposal cakes', height: 'short' },
-  { id: 10, type: 'image', src: cake10, alt: 'Pink frosted cake', height: 'medium' },
-  { id: 11, type: 'image', src: cake11, alt: 'Gold and black cake', height: 'tall' },
+  { id: 9, type: 'image', src: category9, alt: 'Proposal cakes', height: 'short' },
+  { id: 10, type: 'image', src: category10, alt: 'Pink frosted cake', height: 'medium' },
+  { id: 11, type: 'image', src: category1, alt: 'Gold and black cake', height: 'tall' },
   { id: 12, type: 'video', src: motion1, alt: 'Rainbow cake decoration', thumbnail: motion1Thumb, height: 'medium' },
 
- { id: 13, type: 'image', src: cake12, alt: 'Princess castle cake', height: 'medium' },
+ { id: 13, type: 'image', src: category12, alt: 'Princess castle cake', height: 'medium' },
   { id: 14, type: 'video', src: 'https://youtu.be/71MMlZ2BfwE', alt: 'Christmas tree cake', thumbnail: 'https://picsum.photos/400/500?random=6', height: 'tall' },
-{ id: 15, type: 'image', src: cake14, alt: 'HBD heart cake', height: 'medium' },
+{ id: 15, type: 'image', src: category13, alt: 'HBD heart cake', height: 'medium' },
   { id: 16, type: 'video', src: 'https://picsum.photos/400/520?random=14', alt: 'Welcome baby Eliana', thumbnail: 'https://picsum.photos/400/520?random=14', height: 'tall' },
 
  
   { id: 17, type: 'video', src: 'https://picsum.photos/400/380?random=17', alt: 'Thank you motion', thumbnail: 'https://picsum.photos/400/380?random=17', height: 'short' },
-  { id: 18, type: 'image', src: cake13, alt: 'Blue message cake', height: 'tall' },
-  { id: 19, type: 'image', src: cake15, alt: 'Christmas wreath cake', height: 'medium' },
+  { id: 18, type: 'image', src: category14, alt: 'Blue message cake', height: 'tall' },
+  { id: 19, type: 'image', src: category11, alt: 'Christmas wreath cake', height: 'medium' },
    { id: 20, type: 'video', src: 'https://picsum.photos/400/450?random=10', alt: 'Happy birthday motion cake', thumbnail: 'https://picsum.photos/400/450?random=10', height: 'medium' },
   
 ];
