@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Black2 from '@/assets/images/black.png';
 export default function OurStorypage() {
   return (
     <div className="min-h-screen bg-white">
@@ -12,7 +12,7 @@ export default function OurStorypage() {
             <span className="text-pink-500">Flour & Sugar.</span>
           </h1>
           <p className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-            The 3B's Bakery was born from a simple desire: to turn life's sweetest moments into edible memories.
+            Nini Nayah Bakery was born from a simple desire: to turn life's sweetest moments into edible memories.
           </p>
         </div>
       </section>
@@ -25,14 +25,14 @@ export default function OurStorypage() {
             <div className="relative">
               <div className="rounded-3xl overflow-hidden shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600&h=800&fit=crop" 
-                  alt="Berlinda Austin - Founder"
-                  className="w-full h-150 object-cover"
+                  src={Black2}
+                  alt="Nina Nayah - Founder"
+                  className="w-full h-180 object-cover"
                 />
               </div>
               {/* Name Badge */}
               <div className="absolute bottom-6 left-6 bg-white rounded-2xl px-6 py-4 shadow-xl">
-                <h3 className="text-xl font-bold text-purple-800">Berlinda Austin</h3>
+                <h3 className="text-xl font-bold text-purple-800">Nini Nayah</h3>
                 <p className="text-sm text-purple-600 uppercase tracking-wider">Founder & Head Baker</p>
               </div>
             </div>
@@ -41,12 +41,12 @@ export default function OurStorypage() {
             <div>
               <p className="text-purple-700 font-bold uppercase tracking-widest text-sm mb-4">Our Origin</p>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Berly's Bakes & Blends
+                Nini Nayah Bakery
               </h2>
               
               <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
                 <p>
-                  Founded in 2025 by <span className="font-semibold text-gray-800">Berlinda Austin</span>, The 3B's started as a passion project in a home kitchen. What began as baking for close friends quickly grew into a full-service bakery serving the Tema-Michel Camp community and beyond.
+                  Founded in 2025 by <span className="font-semibold text-gray-800">Nini Nayah</span>, Nayah Bakery started as a passion project in a home kitchen. What began as baking for close friends quickly grew into a full-service bakery serving Bamenda community and beyond.
                 </p>
                 
                 <p>
@@ -57,7 +57,7 @@ export default function OurStorypage() {
               {/* Stats */}
               <div className="grid grid-cols-3 gap-8 mt-12">
                 <div>
-                  <h3 className="text-4xl font-bold text-purple-700 mb-2">2025</h3>
+                  <h3 className="text-4xl font-bold text-purple-700 mb-2">2024</h3>
                   <p className="text-sm text-gray-500 uppercase tracking-wider">Established</p>
                 </div>
                 <div>
