@@ -18,9 +18,9 @@ export const FooterContent = () => {
         title="Explore"
         variant="explore"
         links={[
-          { text: "Shop", href: "https://cake-business-1.onrender.com/shop" },
-          { text: "Our Story", href: "https://cake-business-1.onrender.com/ourstories" },
-           { text: "Gallery", href: "https://cake-business-1.onrender.com/gallery" },
+          { text: "Shop", href: "/shop" },
+          { text: "Our Story", href: "/ourstories" },
+           { text: "Gallery", href: "/gallery" },
         ]}
       />
       <div className="flex justify-center md:justify-start">
