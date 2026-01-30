@@ -29,7 +29,7 @@ import roll2 from '@/assets/images/roll2.jpeg';
 import roll3 from '@/assets/images/roll3.jpeg';
 import roll5 from '@/assets/images/roll5.jpeg';
 import roll6 from '@/assets/images/roll6.jpeg';
-import rolls from '@/assets/images/rolls.jpeg';
+import rolls from '@/assets/images/roll.jpeg';
 import slice1 from '@/assets/images/slice1.jpeg';
 import slice3 from '@/assets/images/slice3.jpeg';
 import slice4 from '@/assets/images/slice4.jpeg';

@@ -47,33 +47,7 @@ const galleryItems = [
   
 ];
 
-// const GalleryItem = ({ item, onClick }) => {
-//   return (
-//     <div
-//       onClick={() => onClick(item)}
-//       className="relative group cursor-pointer overflow-hidden rounded-2xl bg-gray-100"
-//       style={{
-//         gridRowEnd: `span ${Math.floor(Math.random() * 2) + 20}`
-//       }}
-//     >
-//       <img
-//         src={item.type === 'video' ? item.thumbnail : item.src}
-//         alt={item.alt}
-//         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-//       />
 
-//       {/* Overlay on hover */}
-//       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
-
-//       {/* Motion badge for videos */}
-//       {item.type === 'video' && (
-//         <div className="absolute top-4 right-4 bg-black/70 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
-//           Motion
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
 const GalleryItem = ({ item}) => {
   return (
     <div

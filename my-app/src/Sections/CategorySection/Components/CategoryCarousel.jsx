@@ -8,7 +8,7 @@ import category7 from '@/assets/images/category7.jpg';
 import cakebana13 from '@/assets/images/cakebana13.jpg';
 import cupcake17 from '@/assets/images/cupcake17.jpg';
 import slice3 from '@/assets/images/slice3.jpeg';
-import rolls from '@/assets/images/rolls.jpeg';
+import rolls from '@/assets/images/roll.jpeg';
 
 export const CategoryCarousel = () => {
   return (
