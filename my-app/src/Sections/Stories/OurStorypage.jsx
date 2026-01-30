@@ -1,5 +1,6 @@
 import React from 'react';
 import Black2 from '@/assets/images/black.png';
+import { Link } from 'react-router-dom';
 export default function OurStorypage() {
   return (
     <div className="min-h-screen bg-white">
@@ -129,12 +130,9 @@ export default function OurStorypage() {
             Whether it's a wedding, birthday, or just because—we're here to make your celebration unforgettable.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <a 
-              href="/shop" 
-              className="bg-purple-700 hover:bg-purple-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-colors shadow-lg"
-            >
-              Browse Our Menu
-            </a>
+           
+
+            <Link to="/shop"className="bg-purple-700 hover:bg-purple-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-colors shadow-lg">Browse Our Menu</Link>
             <a 
               href="#contact" 
               className="bg-white hover:bg-gray-50 text-purple-700 border-2 border-purple-700 px-8 py-4 rounded-xl font-semibold text-lg transition-colors"

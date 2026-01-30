@@ -16,6 +16,7 @@ import category14 from '@/assets/images/category14.jpg';
 import motion1 from '@/assets/videos/motion1.mp4';
 import motion1Thumb from '@/assets/images/cup-cake.jpg'
 
+
 const galleryItems = [
   { id: 1, type: 'image', src: category1, alt: 'Bento cake with pink frosting', height: 'tall' },
   { id: 3, type: 'image', src: category2, alt: 'Birthday cake with candles', height: 'medium' },

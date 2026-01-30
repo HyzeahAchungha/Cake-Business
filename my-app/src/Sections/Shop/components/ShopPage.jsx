@@ -102,7 +102,7 @@ const products = [
   },
   {
     id: 7,
-    name: "Custom Cakes",
+    name: "Customised cakes",
     category: "Customised cakes",
     description: "You dream it, we bake it. Fully personalized designs.",
     price: 20000,
@@ -135,7 +135,7 @@ const products = [
   },
   {
     id: 10,
-    name: "Custom Cakes",
+    name: "Bento Cakes",
     category: "Bento",
     description: "You dream it, we bake it. Fully personalized designs.",
     price: 15000,
@@ -146,7 +146,7 @@ const products = [
   },
   {
     id: 11,
-    name: "Custom Cakes",
+    name: "Bento Cakes",
     category: "Bento",
     description: "You dream it, we bake it. Fully personalized designs.",
     price: 15000,
@@ -157,7 +157,7 @@ const products = [
   },
   {
     id: 12,
-    name: "Custom Cakes",
+    name: "Anniversary cakes",
     category: "Anniversary cakes",
     description: "You dream it, we bake it. Fully personalized designs.",
     price: 15000,
@@ -168,7 +168,7 @@ const products = [
   },
   {
     id: 13,
-    name: "Custom Cakes",
+    name: "Anniversary cakes",
     category: "Anniversary cakes",
     description: "You dream it, we bake it. Fully personalized designs.",
     price: 15000,
@@ -179,7 +179,7 @@ const products = [
   },
 
    {
-    id: 13,
+    id: 14,
     name: "Budget Cake",
     category: "Budget Cake",
     description: "You dream it, we bake it. Fully personalized designs.",
@@ -190,7 +190,7 @@ const products = [
     toppings: []
   },
    {
-    id: 14,
+    id: 15,
     name: "Budget Cake",
     category: "Budget Cake",
     description: "You dream it, we bake it. Fully personalized designs.",
@@ -201,7 +201,7 @@ const products = [
     toppings: []
   },
    {
-    id: 15,
+    id: 16,
     name: "Regular fondant cakes",
     category: "Regular fondant cakes",
     description: "You dream it, we bake it. Fully personalized designs.",
@@ -212,7 +212,7 @@ const products = [
     toppings: []
   },
    {
-    id: 15,
+    id: 17,
     name: "Regular fondant cakes",
     category: "Regular fondant cakes",
     description: "You dream it, we bake it. Fully personalized designs.",
@@ -223,7 +223,7 @@ const products = [
     toppings: []
   },
   {
-    id: 16,
+    id: 18,
     name: "chocolate ",
     category: "Cupcakes",
     description: "You dream it, we bake it. Fully personalized designs.",
@@ -235,7 +235,7 @@ const products = [
   },
 
    {
-    id: 17,
+    id: 19,
     name: "chocolate ",
     category: "Cupcakes",
     description: "You dream it, we bake it. Fully personalized designs.",
@@ -246,7 +246,7 @@ const products = [
     toppings: []
   },
   {
-    id: 18,
+    id: 20,
     name: "Custom Cakes",
     category: "Customised cakes",
     description: "You dream it, we bake it. Fully personalized designs.",
@@ -257,7 +257,7 @@ const products = [
     toppings: []
   },
   {
-    id: 19,
+    id: 21,
     name: "Birthday",
     category: "Kiddies cake",
     description: "Fun, colorful characters and designs for the little ones.",
@@ -268,7 +268,7 @@ const products = [
     toppings: []
   },
   {
-    id: 20,
+    id: 22,
     name: "Graduation",
     category: "Anniversary cakes",
     description: "You dream it, we bake it. Fully personalized designs.",
@@ -279,7 +279,7 @@ const products = [
     toppings: []
   },
    {
-    id: 21,
+    id: 23,
     name: "Cake Slices",
     category: "Cake slice",
     description: "Grab a slice of heaven on the go.",
@@ -289,7 +289,7 @@ const products = [
     toppings: []
   },
    {
-    id: 22,
+    id: 24,
     name: "Cake Slices",
     category: "Cake slice",
     description: "Grab a slice of heaven on the go.",
@@ -299,7 +299,7 @@ const products = [
     toppings: []
   },
    {
-    id: 23,
+    id: 25,
     name: "Cake Slices",
     category: "Cake slice",
     description: "Grab a slice of heaven on the go.",
@@ -310,7 +310,7 @@ const products = [
   },
 
   {
-    id: 24,
+    id: 26,
     name: "Savory Spring Rolls (5 pcs)",
     category: "Spring rolls",
     description: "Crispy or frozen, packed with savory filling.",
@@ -320,7 +320,7 @@ const products = [
     toppings: []
   },
   {
-    id: 24,
+    id: 27,
     name: "Savory Spring Rolls (5 pcs)",
     category: "Spring rolls",
     description: "Crispy or frozen, packed with savory filling.",
@@ -330,7 +330,7 @@ const products = [
     toppings: []
   },
   {
-    id: 25,
+    id: 28,
     name: "Savory Spring Rolls (5 pcs)",
     category: "Spring rolls",
     description: "Crispy or frozen, packed with savory filling.",
@@ -340,7 +340,7 @@ const products = [
     toppings: []
   },
   {
-    id: 26,
+    id: 29,
     name: "Savory Spring Rolls (5 pcs)",
     category: "Spring rolls",
     description: "Crispy or frozen, packed with savory filling.",
@@ -350,7 +350,7 @@ const products = [
     toppings: []
   },
   {
-    id: 27,
+    id: 30,
     name: "Savory Spring Rolls (5 pcs)",
     category: "Spring rolls",
     description: "Crispy or frozen, packed with savory filling.",
@@ -360,7 +360,7 @@ const products = [
     toppings: []
   },
   {
-    id: 28,
+    id: 31,
     name: "Savory Spring Rolls (5 pcs)",
     category: "Spring rolls",
     description: "Crispy or frozen, packed with savory filling.",
@@ -370,7 +370,7 @@ const products = [
     toppings: []
   },
   {
-    id: 29,
+    id: 32,
     name: "Ring Donuts (15pcs per pack)",
     category: "Ring donut",
     description: "Soft, fluffy donuts. Choose your favorite finish.",
@@ -380,7 +380,7 @@ const products = [
     toppings: []
   },
   {
-    id: 30,
+    id: 33,
     name: "Ring Donuts (15pcs per pack)",
     category: "Ring donut",
     description: "Soft, fluffy donuts. Choose your favorite finish.",
